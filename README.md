@@ -1,39 +1,43 @@
-# 🔹 AI Chatbot (TinyLlama + Ollama)
-**By Kritika Kasera**
+# 🔹 Kritika's AI Chatbot  
+**By Kritika Kasera**  
 
-A lightweight, privacy-focused chatbot that runs entirely on your device.
-
----
-
-## ✨ Features
-
-- 🗣️ **Free Chat Mode** – Casual conversations with LLM  
-- 🎓 **Guided Learning Mode** – Structured, topic-based responses  
-- 🔒 **Fully Local Deployment** – All inference happens on your device using Ollama  
-- 🧠 **TinyLlama (1.1B)** – Efficient and fast LLM for personal use  
-- 🌐 **Modern UI with Streamlit** – Minimal and interactive interface  
-- 💡 **Modular Prompt Handling** – Easy to extend with new features  
+🌸 *Local-first chatbot with graceful cloud fallbacks*  
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ Features  
 
-| Component        | Technology Used    |
-|------------------|--------------------|
-| Frontend         | Streamlit          |
-| LLM Backend      | Ollama             |
-| Language Model   | TinyLlama (1.1B)   |
-| Language         | Python 3.8+        |
+### Local Mode (Full Power)  
+- 🗣️ **Free Chat** with TinyLlama (1.1B) via Ollama  
+- 🎓 **Guided Learning** with step-by-step tutoring  
+- 🔒 **100% Private** - No data leaves your device  
+
+### Cloud Mode (Demo)  
+- 🌐 **Friendly Placeholders** when Ollama isn't available  
+- 💡 **Setup Instructions** embedded in responses  
 
 ---
 
-## 🚀 Installation (3 Easy Steps)
+## 🛠️ Tech Stack  
 
-1. **Install Ollama**
+| Component        | Local Mode         | Cloud Mode         |  
+|------------------|--------------------|--------------------|  
+| AI Engine        | Ollama + TinyLlama | Streamlit Fallbacks|  
+| Inference        | On your device     | Demo messages      |  
+| Requirements     | Python 3.8+, Ollama| Python 3.8+        |  
 
-   ```bash
-   # macOS / Linux
-   curl -fsSL https://ollama.ai/install.sh | sh
+---
 
-   # Windows (PowerShell)
-   winget install Ollama
+## 🚀 Installation  
+
+### 1. For Full Experience (Local)  
+```bash
+# Install Ollama  
+curl -fsSL https://ollama.ai/install.sh | sh  # Linux/macOS  
+winget install ollama                         # Windows  
+
+# Get model  
+ollama pull tinyllama  
+
+# Run chatbot  
+streamlit run app.py  
