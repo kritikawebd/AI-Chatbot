@@ -1,43 +1,44 @@
-# 🔹 Kritika's AI Chatbot  
-**By Kritika Kasera**  
+# 🧠 Kritika's Local AI Chatbot
 
-🌸 *Local-first chatbot with graceful cloud fallbacks*  
-
----
-
-## ✨ Features  
-
-### Local Mode (Full Power)  
-- 🗣️ **Free Chat** with TinyLlama (1.1B) via Ollama  
-- 🎓 **Guided Learning** with step-by-step tutoring  
-- 🔒 **100% Private** - No data leaves your device  
-
-### Cloud Mode (Demo)  
-- 🌐 **Friendly Placeholders** when Ollama isn't available  
-- 💡 **Setup Instructions** embedded in responses  
+A simple offline chatbot powered by [Ollama](https://ollama.com) and Streamlit.  
+No internet needed after setup. Your data stays 100% private.
 
 ---
 
-## 🛠️ Tech Stack  
+## ✅ Features
 
-| Component        | Local Mode         | Cloud Mode         |  
-|------------------|--------------------|--------------------|  
-| AI Engine        | Ollama + TinyLlama | Streamlit Fallbacks|  
-| Inference        | On your device     | Demo messages      |  
-| Requirements     | Python 3.8+, Ollama| Python 3.8+        |  
+- Fully offline after setup
+- Uses `tinyllama` (or any Ollama model)
+- Clean interface with Streamlit
+- Real-time response streaming
+- Works on CPU or GPU
 
 ---
 
-## 🚀 Installation  
+## 🛠️ Setup Instructions
 
-### 1. For Full Experience (Local)  
-```bash
-# Install Ollama  
-curl -fsSL https://ollama.ai/install.sh | sh  # Linux/macOS  
-winget install ollama                         # Windows  
+1. Install Ollama from: https://ollama.com/download  
+2. Pull a model (e.g., tinyllama):
+   ```bash
+   ollama pull tinyllama
+   ```
+3. Install Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the chatbot:
+   ```bash
+   streamlit run app.py
+   ```
 
-# Get model  
-ollama pull tinyllama  
+---
 
-# Run chatbot  
-streamlit run app.py  
+## 📦 Requirements
+
+- Python 3.8+
+- Ollama installed
+- Model pulled via Ollama (e.g., `tinyllama`)
+
+---
+
+💡 Works offline once the model is downloaded. Ideal for privacy-focused use.
